@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>BRITMUN - About Us</title>
+</head>
+<body class="max-w-screen-2xl">
+
+    <div id="queryContainer" class="">
+        <button id="queryBtn" class="text-white z-10 w-12 h-12 lg:w-[70px] lg:h-[70px]">
+            <div class="closedForm text-3xl lg:text-5xl"><i class="uil uil-comments"></i></div>
+            <div class="openForm text-3xl lg:text-5xl">ⓧ</div>
+        </button>
+        <form id="queryForm" action="" method="post" class="">
+            <div class="form w-[350px] h-[500px] flex flex-col text-white justify-center">
+                <div class="my-3 uppercase font-mono text-center text-2xl">
+                    Please Submit your Query here
+                </div>
+                    
+                <div class="my-3 mx-2">
+                    <label class="italic" for="queryEmail">Your Email</label>
+                    <input class="w-80 h-10 rounded-md p-3 text-oblack" id="queryEmail" name="queryEmail" type="email">
+                </div>
+
+                <div class="my-3 mx-2">
+                    <label class="italic" for="queryQuery">Your Query</label>
+                    <textarea  class="w-80 h-40 rounded-md text-oblack p-3 resize-none" name="queryQuery" id="queryQuery" cols="30" rows="10"></textarea>
+                </div>
+                
+                <div>
+                    <input type="submit" value="Submit" id="querySubmit" class="querySubmit my-3 mx-2 w-80 h-10 rounded-md cursor-pointer">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <button id="navBarBtnOpen" class="p-1 bg-white shadow-md rounded-full fixed top-10 left-5 z-[149] flex items-center justify-center lg:hidden">
+        <div class="w-10 h-10 m-auto flex justify-center items-center text-xl">
+            <i class="uil uil-bars"></i>
+        </div>
+    </button>
+
+    <!-- Fixed Navbar -->
+    <nav id="navbar" class="flex fixed left-0 top-0 w-72 py-6 pb-10 z-[150] h-screen bg-white flex-col items-center justify-evenly">
+        <button id="navBarBtnClose" class="absolute right-10 top-5 text-xl">
+            <i class="uil uil-multiply"></i>
+        </button>
+        <div>
+            <img src="../imgs/logo.png" class="w-56 h-56 rounded-full" alt="Britmun logo">
+        </div>
+        <div id="countdownDate" class="flex flex-col items-center text-center font-mono space-y-3">
+            <div id="days" class="">
+                <div id="daysLeft" class="text-3xl">00</div>
+                <div id="daysTitle" class="text-xs">DAYS</div>
+            </div>
+            <div id="hours" class="">
+                <div id="hoursLeft" class="text-3xl">00</div>
+                <div id="hoursTitle" class="text-xs">HOURS</div>
+            </div>
+            <div id="minutes" class="hidden">
+                <div id="minutesLeft" class="text-3xl">00</div>
+                <div id="minutesTitle" class="text-xs">MINUTES</div>
+            </div>
+            <div id="seconds" class="hidden">
+                <div id="secondsLeft" class="text-3xl">00</div>
+                <div id="secondsTitle" class="text-xs">SECONDS</div>
+            </div>
+        </div>
+        <div>
+            <ul class="capitalize text-3xl font-thin flex flex-col items-center space-y-8">
+                <ul class="capitalize text-3xl font-thin flex flex-col items-center space-y-8">
+                    <li class="hover:-translate-y-[2px] translate-y-0 transition"><a href="index.html" >Home</a></li>
+                    <li class="hover:-translate-y-[2px] translate-y-0 transition"><a href="about.html" >about</a></li>
+                    <li class="text-center hover:-translate-y-[2px] translate-y-0 transition text-lblue"><a href="photos.html">Event Photos</span></a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- The Content -->
+
+    <main class="lg:ml-72 min-h-screen w-[100vw-18rem] overflow-x-hidden">
+        
+        <div class="flex">
+            <div class="bg-white w-[30%] h-[49vh] hidden sm:block">
+                <img src="./../imgs/people1.jpg" alt="" class="relative left-28 top-20 w-[50vh] border-8 border-white rounded-tr-[100px] rounded-bl-[100px] rounded-tl-3xl rounded-br-3xl">
+            </div>
+
+            <div class="overflow-y-hidden bg-ored p-10 w-full sm:w-[70%] h-fit sm:h-[49vh] font-extrabold uppercase italic text-white text-[4rem] flex flex-col justify-start items-left sm:items-center after:hidden after:sm:block after:content-['ABOUT'] after:leading-[12rem] after:text-white after:text-[10rem] after:opacity-20">
+                <h1 class="sm:place-self-start sm:ml-32 place-self-center text-lg sm:text-2xl">
+                    About Us
+                </h1>
+                <p class="text-sm sm:text-base max-w-[100vw] sm:w-[36rem] font-light text-left mt-5 sm:pl-10">
+                    Welcome to BRITMUN VIII, an educational conference for school students in Years 9-13. Our conference exposes students to global issues and teaches them valuable skills such as diplomacy and public speaking. We hope you will join us for this exciting event.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex">
+            <div class="overflow-y-hidden bg-dblue p-10 w-full sm:w-[70%] h-fit sm:h-[49vh] font-extrabold uppercase italic text-white text-[4rem] flex flex-col justify-start items-left after:hidden after:sm:block after:content-['MISSION'] after:leading-[12rem] after:text-white after:text-[10rem] after:opacity-20">
+                <h1 class="text-lg sm:text-2xl place-self-center sm:place-self-start">
+                    The Mission
+                </h1>
+                <p class="text-sm sm:text-base max-w-[100vw] sm:w-[36rem] font-light text-left mt-5">
+                    Our MUN conference aims to empower students to debate global issues and improve their understanding of international relations and public speaking. By simulating diplomacy and incorporating inspiring themes, we strive to create a dynamic and exciting event that educates and empowers attendees.
+                </p>
+            </div>
+
+            <div class="bg-white w-[30%] h-[49vh] hidden sm:block">
+                <img src="./../imgs/people2.jpg" alt="" class="relative right-40 top-20 w-[50vh] border-8 border-white rounded-tr-[100px] rounded-bl-[100px] rounded-tl-3xl rounded-br-3xl">
+            </div>
+        </div>
+
+        <div class="flex">
+            <div class="bg-white w-[30%] h-[49vh] hidden sm:block"">
+                <img src="./../imgs/people3.jpg" alt="" class="relative left-28 top-20 w-[50vh] border-8 border-white rounded-tl-[100px] rounded-br-[100px] rounded-tr-3xl rounded-bl-3xl">
+            </div>
+            <div class="overflow-y-hidden bg-lblue p-10 w-full sm:w-[70%] h-fit sm:h-[49vh] font-extrabold uppercase italic text-white text-[4rem] flex flex-col justify-start items-left sm:items-center after:hidden after:sm:block after:content-['VISION'] after:leading-[12rem] after:text-white after:text-[10rem] after:opacity-20">
+                <h1 class="place-self-center sm:place-self-start sm:ml-28 sm:text-2xl text-lg">
+                    The Vision
+                </h1>
+                <p class="text-sm sm:text-base max-w-[100vw] sm:w-[36rem] font-light text-left mt-5 mb-3 sm:mb-0 sm:pl-10">
+                    BRITMUN VIII aims to address neglected global issues through debate and resolution-making. We strive to create a highly influential conference that encourages leadership and knowledge gain. Our councils allow participants to tackle pressing issues under the theme 'The Water Under Our Bridge'. 
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const form = document.querySelector("#queryForm")
+        const submitButton = document.querySelector("#querySubmit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwjpGvHCes8fLt_ydel3ZTgpCCY46_oDvBzsrompaGp0NkUbuI58Wikj1Nvky0fPN3s/exec'
+
+        form.addEventListener('submit', e => {
+            submitButton.disabled = true
+            e.preventDefault()
+            let requestBody = new FormData(form)
+            fetch(scriptURL, { method: 'POST', body: requestBody})
+            .then(response => {
+                alert('Success!', response)
+                submitButton.disabled = false
+                })
+            .catch(error => {
+                alert('Error!', error.message)
+                    submitButton.disabled = false
+                }
+            )
+            document.querySelector("#queryEmail").value = "";
+            document.querySelector("#queryQuery").value = " ";
+        })
+    </script>
+    <script src="./../scripts/myscript.js"></script>
+    <script src="./../scripts/countDown.js"></script>
+    <script src="./../scripts/queryBtn.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+#form-container {
+  background-color: white;
+  text-align: center;
+  padding: 0px;
+  margin: 2.5rem 0;
+
+  position: relative;
+}
+
+#form-container #progressBar {
+  width: 250px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#form-container #progressBar::after {
+  content: '';
+  position: absolute;
+  top: 42.5px;
+  left: 0;
+
+  width: 250px;
+  height: 2px;
+  background-color: #cacaca;
+}
+
+.progressCheckpoint{
+  position: relative;
+}
+
+#progressBar .progressCheckpoint .check{
+  color: #ccc ;
+  transition: 0.4s ease-in-out;
+}
+
+#progressBar .progressCheckpoint.active .check{
+  color:green;
+}
+
+#progressBar .progressCheckpoint .step {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #1DACE8;
+  border-radius: 9999px;
+  background-color: white;
+  z-index: 5;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#progressBar .progressCheckpoint.active .step {
+  background-color: #1DACE8;
+  color: white
+}
+
+#progressBar .progressCheckpoint .step::after{
+  content: '';
+  position: absolute;
+  left: 37.5px;
+  z-index: -1;
+
+  background-color: #1DACE8;
+  width: 0;
+  height: 2px;
+
+  transition: 0.4s ease-in-out;
+}
+
+#progressBar .progressCheckpoint.active .step::after{
+  width: calc(250px / 4);
+}
+
+#progressBar .progressCheckpoint:last-child .step::after{
+  display: none;
+}
+
+/* -------------------- The Form -------------------- */
+
+#form-container{
+  overflow-x: hidden;
+}
+
+.form-outer {
+  display: block;
+  width: 100%;
+}
+
+#registrationForm {
+  width: 400%;
+  display: flex;
+}
+
+#registrationForm .page{
+  margin: 1.25rem 0;
+  width: 25%;
+  transition: margin-left 0.4s ease-in-out;
+  overflow-y: hidden;
+}
+
+/* #registrationForm .slide-page{
+  margin-left: -75%;
+} */
+
+#registrationForm .page .page-title{
+  font-size: 1.25rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.page-content .text-field{
+  height: 2.5rem;
+  border-radius: 0.25rem;
+
+  padding: 0.5rem;
+  border: 1px solid #cacaca;
+}
+
+.page-content textarea{
+  border: 1px solid #cacaca;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.page-content .NextBtn, .PrevBtn{
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #F44747;
+  color: white;
+}
+
+.page-content .PrevBtn{
+  background-color: #1A154C;
+}
+

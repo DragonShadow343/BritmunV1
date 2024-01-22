@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/output.css">
+    <!-- <link rel="stylesheet" href="../styles/register_page.css">  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>BRITMUN - Councils and Allocations</title>
+    <link rel="icon" href="./../imgs/logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Fixed Navbar -->
+    <button id="navBarBtnOpen" class="p-1 bg-white shadow-md rounded-full fixed top-10 left-5 z-[149] flex items-center justify-center lg:hidden">
+        <div class="w-10 h-10 m-auto flex justify-center items-center text-xl">
+            <i class="uil uil-bars"></i>
+        </div>
+    </button>
+
+    <!-- Fixed Navbar -->
+    <nav id="navbar" class="flex fixed left-0 top-0 w-72 py-6 pb-10 z-[150] h-screen bg-white flex-col items-center justify-evenly">
+        <button id="navBarBtnClose" class="absolute right-10 top-5 text-xl">
+            <i class="uil uil-multiply"></i>
+        </button>
+        <div>
+            <img src="../imgs/logo.png" class="w-56 h-56 rounded-full" alt="Britmun logo">
+        </div>
+        <div id="countdownDate" class="flex flex-col items-center text-center font-mono space-y-3 mb-3">
+            <div id="days" class="">
+                <div id="daysLeft" class="text-3xl">00</div>
+                <div id="daysTitle" class="text-xs">DAYS</div>
+            </div>
+            <div id="hours" class="">
+                <div id="hoursLeft" class="text-3xl">00</div>
+                <div id="hoursTitle" class="text-xs">HOURS</div>
+            </div>
+            <div id="minutes" class="hidden">
+                <div id="minutesLeft" class="text-3xl">00</div>
+                <div id="minutesTitle" class="text-xs">MINUTES</div>
+            </div>
+            <div id="seconds" class="hidden">
+                <div id="secondsLeft" class="text-3xl">00</div>
+                <div id="secondsTitle" class="text-xs">SECONDS</div>
+            </div>
+        </div>
+        <div>
+            <ul class="capitalize text-3xl font-thin flex flex-col items-center space-y-8">
+                <li class="hover:-translate-y-[2px] translate-y-0 transition"><a href="index.html" >home</a></li>
+                <li class="hover:-translate-y-[2px] translate-y-0 transition"><a href="about.html" >about</a></li>
+                <li class="text-center hover:-translate-y-[2px] translate-y-0 transition text-lblue"><a href="councils.html" >Allocations <br> <span class="border-t-[1px] border-lblue px-1.5">Councils</span></a></li>
+                <!-- <li class=""><a href="test.html" >Allocation</a></li> -->
+                <li><a class="uppercase cursor-not-allowed px-8 py-2 bg-[#cacaca] text-white rounded-full">register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- The Content -->
+    <main class="lg:ml-72 min-h-screen bg-white flex flex-col items-center">
+
+        <!-- <div class="font-mono text-xl sm:text-3xl mt-16 mb-10">Delegate Allocations and Councils</div> -->
+
+        <div class="council-container flex flex-col items-center sm:grid sm:grid-flow-row sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8 my-10">
+
+            <div class="col-span-2 rounded-md gap-6 flex flex-col items-center sm:grid sm:grid-cols-2">
+
+                <div class="col-span-2 border-2 w-80 sm:w-[41.5rem] border-dblue h-28 rounded-md bg-dblue text-white justify-center flex items-center font-mono text-2xl mt-6 sm:my-0">
+                    Delegate Allocations <br class="sm:hidden"> and Councils
+                </div>
+
+                <div class="flex w-80 h-fit p-3 pt-4 flex-col border-dblue border-2 rounded-md items-center">
+                    <div class="px-4">
+                        <p class="font-mono text-xl my-4">Rules of Procedure</p>
+                        <div class="h-80">
+                            BRITMUN considers that the best approach for students to learn about the United Nations is through the Rules of Procedure, which entails a clear understanding of the benefits and drawbacks of debating conflicts in accordance with these standards is conveyed through a realistic simulation of the subjects discussed using the actual regulations that regulate various UN entities.
+                        </div>
+                        <a href="./../Documentation/rop.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-dblue rounded-[3px] text-lg w-72">
+                            <div class="">Rules of Procedure</div>
+                            <i class="uil uil-angle-right-b text-[1.25rem]"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="flex col-start-2 w-80 h-fit p-3 pt-4 flex-col border-dblue border-2 rounded-md items-center">
+                    <div class="px-4">
+                        <p class="font-mono text-xl my-4">Delegate Allocations</p>
+                        <div class="h-80">
+                            Delegate Allocations will provide each delegate (depending on the council) with a country/personality, which they must represent and portray to the best of their ability. The delegate must put aside their personal viewpoints, and embrace that of their assigned country/personality. They must represent their given stance while: debating, writing resolutions, and sending amendments, to better the situation.
+                        </div>
+                        <a href="./../Documentation/allocations.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-dblue rounded-[3px] text-lg w-72">
+                            <div class="">Delegate Allocations</div>
+                            <i class="uil uil-angle-right-b text-[1.25rem]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Councils -->
+            <div class="general w-80 h-fit p-3 pt-4 flex flex-col border-ored border-2 rounded-md">
+                <img src="./../imgs/Council Logos/unsc.png" class="w-72 h-72 rounded-full" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex text-center mb-3 text-dblue">UN Security Council</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-ored px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-sm">The Arctic's Ambiguous Borders and Territorial Dominance</li>
+                        <li class="my-2 text-sm">Haiti Political Instability and Social Unrest in 2022</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/General/UNSC.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-ored rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="special w-80 h-fit p-3 pt-4 flex flex-col border-lblue border-2 rounded-md">
+                <div class="w-72 h-72 object-cover my-6">
+                    <img src="./../imgs/Council Logos/icc.png" alt="">
+                </div>
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">International Criminal Court</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-lblue px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-base">Operation Paperclip</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/Special/ICC.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-lblue rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="general w-80 h-fit p-3 pt-4 flex flex-col border-ored border-2 rounded-md">
+                <img src="./../imgs/Council Logos/specpol.png" class="w-72 h-72 rounded-full object-cover" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">SPECPOL</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-ored px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-xs">The Role of Privatised Military Companies in Instigating Conflicts in Asia</li>
+                        <li class="my-2 text-xs">The Issuing of Reparations for Former Colonisers</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/General/SPECPOL.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-ored rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="general w-80 h-fit p-3 pt-4 flex flex-col border-ored border-2 rounded-md">
+                <img src="./../imgs/Council Logos/uncsw.png" class="w-72 h-72 rounded-full object-cover" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">UN Commision on the Status of Women</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-ored px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-xs">The Question of Why There is an Increased Number of Hysterectomies Performed on People of Colour</li>
+                        <li class="my-2 text-xs">Women's Paid Leave in The Workforce with Regards to Pregnancy and Menstruation</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/General/UNCSW.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-ored rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="special w-80 h-fit p-3 pt-4 flex flex-col border-lblue border-2 rounded-md">
+                <img src="./../imgs/Council Logos/psychology.png" class="w-72 h-72" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">Confederaciòn De Psicologia</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-lblue px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-xs">How Different Cultures Treat Different Disorders?</li>
+                        <li class="my-2 text-xs">How Does Androcentrism and Gender Bias in Publications Flaw Our View of Psychopathology?</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/Special/The Confederation of Psychology.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-lblue rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="special w-80 h-fit p-3 pt-4 flex flex-col border-lblue border-2 rounded-md">
+                <img src="./../imgs/Council Logos/marvel.png" class="w-72 h-72 object-cover" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">Council of Marvels (CRISIS)
+                </div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-lblue px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-xs">Superheroes Must be Held Accountable for their Destruction and Collateral Damage</li>
+                        <li class="my-2 text-xs">The Privatisation of Weaponry, Biological Warfare, and Superhuman Personnel: Is it legal because it is on behalf of S.H.E.I.L.D?</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/Special/Council of Marvels.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-lblue rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="general w-80 h-fit p-3 pt-4 flex flex-col border-ored border-2 rounded-md">
+                <div class="w-72 h-72 rounded-full p-3 my-6">
+                    <img src="./../imgs/Council Logos/uncnd.png" alt="">
+                </div>
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">UN Commission on Narcotics and Drugs</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-ored px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-sm">Contemporary Asian Drug Policy</li>
+                        <li class="my-2 text-sm">Counterfeit Medication Regulation and the Opioid Epidemic</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/General/UNCND.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-ored rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="general w-80 h-fit p-3 pt-4 flex flex-col border-ored border-2 rounded-md">
+                <div class="w-72 h-72 p-3 mt-7 mb-5">
+                    <img src="./../imgs/Council Logos/ecofin.png" alt="">
+                </div>
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">ECOFIN</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-ored px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-sm">The Question of Regulating Illicit Financial Flows</li>
+                        <li class="my-2 text-sm">Discussing the Role of Shell Corporations in Enabling International Criminal Fraud</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/General/ECOFIN.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-ored rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="special w-80 h-fit p-3 pt-4 flex flex-col border-lblue border-2 rounded-md">
+                <img src="./../imgs/Council Logos/f1.png" class="w-72 h-auto object-cover py-[6.75rem]" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">Formula 1</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-lblue px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-sm">Is The Merit of F1 Drivers Justified, Despite Nepotism?</li>
+                        <li class="my-2 text-sm">Can the Cost Cap for F1 Constructors Limit the Scope of Advancement?</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/Special/F1.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-lblue rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="special w-80 h-fit p-3 pt-4 flex flex-col border-lblue border-2 rounded-md">
+                <img src="./../imgs/Council Logos/meta.png" class="w-72 h-72 object-cover p-6" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">Metaverse</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-lblue px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-sm">Ethical Dilemmas within the Metaverse</li>
+                        <li class="my-2 text-sm">To What Extent is Sustainable Communication, Sustainable?</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/Special/Metaverse.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-lblue rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="general w-80 h-fit p-3 pt-4 flex flex-col border-ored border-2 rounded-md">
+                <div class="h-72 w-72 overflow-hidden rounded-full p-3 my-6">
+                    <img src="./../imgs/Council Logos/unfccc.png" class="" alt="">
+                </div>
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">UN Framework Convention on Climate Change</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-ored px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-xs">Unreported Effects of Climate Change in the African Subcontinent</li>
+                        <li class="my-2 text-xs">Marine Heatwaves and Ocean Acidification: the Climate Change Crisis and its Effect on the World</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/General/UNFCCC.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-ored rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="general w-80 h-fit p-3 pt-4 flex flex-col border-ored border-2 rounded-md">
+                <div class="w-72 h-72 rounded-full p-6 mt-3 mb-9">
+                    <img src="./../imgs/Council Logos/unpfii.png" class="" alt="">
+                </div>
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">UN Permanent Forum on Indigenous Issues</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-ored px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-sm">Oppression Faced by North Asian Indigenous People</li>
+                        <li class="my-2 text-sm">America's Native American Boarding Schools</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/General/UNPFII.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-ored rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+            <div class="special w-80 h-fit p-3 pt-4 flex flex-col border-lblue border-2 rounded-md">
+                <img src="./../imgs/Council Logos/cia.png" class="w-72 h-72 object-cover rounded-full" alt="">
+                <div class="text-xl font-[400] self-center h-10 flex justify-center text-center mb-3 text-dblue">CIA</div>
+                <!-- Council Details -->
+                <div class="flex flex-row items-center my-2">
+                    <p class="border-r-2 border-lblue px-2">Topics</p>
+                    <ul class="ml-3 h-28 flex flex-col justify-center">
+                        <li class="my-2 text-xs">Edward Snowden: The Biggest Whistleblower in History and How this Impacts Government Surveillance</li>
+                        <li class="my-2 text-xs">Family Jewels: Declassified C.I.A. Archives that Detail Illegal Activities</li>
+                    </ul>
+                </div>
+                <a href="./../Documentation/Council_Guides/Special/CIA.pdf" target="_blank" class="self-center flex justify-between mt-2 px-3 py-1 text-white bg-lblue rounded-[3px] text-lg w-72">
+                    <p>Background Guide</p>
+                    <div><i class="uil uil-angle-right-b text-[1.25rem]"></i></div>
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        const form = document.querySelector("#registrationForm")
+        const submitButton = document.querySelector("#registrationSubmitBtn")
+        const scriptURL = ''
+
+        form.addEventListener('submit', e => {
+            submitButton.disabled = true
+            e.preventDefault()
+            let requestBody = new FormData(form)
+            // Add the file input to the request body
+            requestBody.append('file', document.querySelector('#paymentProof').files[0])
+            fetch(scriptURL, { method: 'POST', body: requestBody})
+                .then(response => {
+                alert('Success!', response)
+                submitButton.disabled = false
+            })
+                .catch(error => {
+                alert('Error!', error.message)
+                submitButton.disabled = false
+            })
+        })
+    </script>
+
+    <script src="./../scripts/countDown.js"></script>
+    <script src="./../scripts/myscript.js"></script>
+    <!-- <script src="./../scripts/test.js"></script> -->
+</body>
+</html>
